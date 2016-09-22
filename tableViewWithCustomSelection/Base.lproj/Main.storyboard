@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Single-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="SingleSelectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-bN-Sxm" userLabel="HeaderView">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TabelView with Single Selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHL-qZ-kka">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="09g-ja-XoT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YHL-qZ-kka" secondAttribute="bottom" constant="12" id="5FH-df-8Eo"/>
+                                    <constraint firstItem="YHL-qZ-kka" firstAttribute="leading" secondItem="hf8-bN-Sxm" secondAttribute="leading" constant="8" id="cSV-sn-5PB"/>
+                                    <constraint firstAttribute="height" constant="75" id="k4U-Q3-1aw"/>
+                                    <constraint firstAttribute="trailing" secondItem="YHL-qZ-kka" secondAttribute="trailing" constant="8" id="prN-ek-EzY"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oWh-Do-haT">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.4431372549" green="0.2784313725" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="592" id="4aH-Ln-ELG"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="single" id="JZK-kr-uQj" customClass="SingleSelectionTable">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JZK-kr-uQj" id="t5Z-ab-Fee">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6h-bG-eeh">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="pK4-dJ-TLn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="unselected-img" translatesAutoresizingMaskIntoConstraints="NO" id="2Xl-xt-4VV">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="QQ4-hV-xas"/>
+                                                        <constraint firstAttribute="width" constant="20" id="fTn-mw-Uuh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="selected-img" translatesAutoresizingMaskIntoConstraints="NO" id="CUt-Lw-wPg">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="XVJ-wD-5Zw"/>
+                                                        <constraint firstAttribute="height" constant="20" id="jgW-qG-G13"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CUt-Lw-wPg" firstAttribute="top" secondItem="t5Z-ab-Fee" secondAttribute="topMargin" constant="4" id="1ZW-av-WD5"/>
+                                                <constraint firstItem="z6h-bG-eeh" firstAttribute="top" secondItem="t5Z-ab-Fee" secondAttribute="topMargin" constant="3" id="8I9-YJ-OLE"/>
+                                                <constraint firstItem="z6h-bG-eeh" firstAttribute="leading" secondItem="t5Z-ab-Fee" secondAttribute="leadingMargin" constant="16" id="Cd4-YS-ivv"/>
+                                                <constraint firstItem="2Xl-xt-4VV" firstAttribute="top" secondItem="t5Z-ab-Fee" secondAttribute="topMargin" constant="4" id="IfK-lw-k8m"/>
+                                                <constraint firstItem="CUt-Lw-wPg" firstAttribute="trailing" secondItem="t5Z-ab-Fee" secondAttribute="trailingMargin" constant="-16" id="OlD-dr-ufi"/>
+                                                <constraint firstItem="CUt-Lw-wPg" firstAttribute="leading" secondItem="z6h-bG-eeh" secondAttribute="trailing" constant="8" id="qOx-ah-zO8"/>
+                                                <constraint firstItem="2Xl-xt-4VV" firstAttribute="trailing" secondItem="t5Z-ab-Fee" secondAttribute="trailingMargin" constant="-16" id="y6A-ns-KVQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.4431372549" green="0.2784313725" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="heading" destination="z6h-bG-eeh" id="92J-5G-Cd4"/>
+                                            <outlet property="selected_img" destination="CUt-Lw-wPg" id="PIb-Bh-zAt"/>
+                                            <outlet property="unselected_img" destination="2Xl-xt-4VV" id="2Xf-6v-eN8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="ian-I5-MQS"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="bDo-Wc-6sm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.76458272931666671" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oWh-Do-haT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="JBC-Ko-O07"/>
+                            <constraint firstAttribute="trailing" secondItem="oWh-Do-haT" secondAttribute="trailing" id="MDT-au-lz4"/>
+                            <constraint firstItem="oWh-Do-haT" firstAttribute="top" secondItem="hf8-bN-Sxm" secondAttribute="bottom" id="Min-VF-AAw"/>
+                            <constraint firstAttribute="trailing" secondItem="hf8-bN-Sxm" secondAttribute="trailing" id="PcP-zH-sP8"/>
+                            <constraint firstItem="hf8-bN-Sxm" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="b4T-Y9-h2a"/>
+                            <constraint firstItem="hf8-bN-Sxm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ijC-z5-gvx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Single" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="singleSelectionTableView" destination="oWh-Do-haT" id="FkZ-P2-fil"/>
+                        <outlet property="tableViewHeightConstraint" destination="4aH-Ln-ELG" id="mmu-UW-y6K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736.79999999999995" y="-338.68065967016497"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="selected-img" width="20" height="20"/>
+        <image name="unselected-img" width="20" height="20"/>
+    </resources>
+</document>
